@@ -1,0 +1,92 @@
+// .loader {
+//   border: 16px solid #f3f3f3; /* Light grey */
+//   border-top: 16px solid #3498db; /* Blue */
+//   border-radius: 50%;
+//   width: 120px;
+//   height: 120px;
+//   animation: spin 2s linear infinite;
+// }
+
+// .preloader {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   z-index: 999;
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+
+//   background: #ffffff;
+
+//   &::before {
+//     position: absolute;
+//     content: "";
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     border: 16px solid #f3f3f3; /* Light grey */
+//     border-top: 16px solid #3498db; /* Blue */
+//     border-radius: 50%;
+//     width: 120px;
+//     height: 120px;
+//     animation: spin 2s linear infinite;
+
+//     // width: 120px;
+//     // height: 120px;
+//     // background: linear-gradient(-45deg, #ed1c24, #fcee21);
+//     // position: absolute;
+//     // left: 50%;
+//     // top: 50%;
+//     // transform: translate(-50%, -50%);
+//     // animation: rotation 4s ease-in-out infinite;
+//   }
+// }
+
+// @keyframes spin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @keyframes rotation {
+//   0% {
+//     border-radius: 5% 5% 5% 5%;
+//     transform: translate(-50%, -50%) rotate(0deg);
+//   }
+//   12.5% {
+//     border-radius: 50% 5% 5% 5%;
+//     transform: translate(-50%, -50%) rotate(45deg);
+//   }
+//   25% {
+//     border-radius: 50% 50% 5% 5%;
+//     transform: translate(-50%, -50%) rotate(90deg);
+//   }
+//   37.5% {
+//     border-radius: 50% 50% 50% 5%;
+//     transform: translate(-50%, -50%) rotate(135deg);
+//   }
+//   50% {
+//     border-radius: 50% 50% 50% 50%;
+//     transform: translate(-50%, -50%) rotate(180deg);
+//   }
+//   62.5% {
+//     border-radius: 5% 50% 50% 50%;
+//     transform: translate(-50%, -50%) rotate(225deg);
+//   }
+//   75% {
+//     border-radius: 5% 5% 50% 50%;
+//     transform: translate(-50%, -50%) rotate(270deg);
+//   }
+//   87.5% {
+//     border-radius: 5% 5% 5% 50%;
+//     transform: translate(-50%, -50%) rotate(315deg);
+//   }
+//   100% {
+//     border-radius: 5% 5% 5% 5%;
+//     transform: translate(-50%, -50%) rotate(360deg);
+//   }
+// }

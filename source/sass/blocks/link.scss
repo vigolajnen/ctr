@@ -1,0 +1,88 @@
+.link {
+  font-weight: 600;
+  color: $color-blue;
+  text-decoration: none;
+}
+
+.link-button {
+  @include rem(padding, 15px 25px 20px);
+
+  color: $color-white;
+  font-family: $font-title;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 24px,
+      1280px: 29px
+    )
+  );
+
+  background-color: $color-blue;
+
+  @include rem(
+    (
+      border-radius: 40px,
+      box-shadow: (
+        0 8px 0px -1px $color-blue-light
+      )
+    )
+  );
+
+  text-decoration: none;
+
+  transition: 1s;
+
+  &--orange {
+    background-color: $color-orange;
+
+    @include rem(box-shadow, 0 8px 0px -1px #e6dcd1);
+  }
+
+  &--green {
+    background-color: $color-green-2;
+    @include rem(box-shadow, 0 8px 0px -1px #e4edd3);
+  }
+
+  &--blue-light-bsh {
+    @include rem(box-shadow, 0 8px 0px -1px #e6e8ed);
+  }
+
+  &--white-green {
+    @include rem(padding, 20px);
+
+    font-family: $font-base;
+    color: $color-green-2;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 17px,
+        1280px: 20px
+      )
+    );
+
+    background-color: #ffffff;
+
+    @include rem(
+      (
+        border: 3px solid $color-green-2,
+        box-shadow: (
+          0 8px 0px -1px transparent
+        )
+      )
+    );
+  }
+
+  &--gray {
+    cursor: not-allowed;
+    background-color: #cccccc;
+    @include rem(box-shadow, 0 8px 0px -1px #e6e8ed);
+    // e6e8ed
+  }
+
+  &:focus,
+  &:hover {
+    @include rem(box-shadow, 0 8px 0px -1px transparent);
+  }
+}
