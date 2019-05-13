@@ -11,14 +11,11 @@
 
   outline: none;
 
-  &--blue {
-    color: $color-blue;
-  }
+  background: $color-turquoise;
+  @include rem(padding, 5px 10px);
+  color: #ffffff;
 
-  &__icon {
-    fill: #c9cdd4;
-
-    @include rem(width, 20px);
-    @include rem(height, 20px);
+  &--gray {
+    background: $color-gray;
   }
 }

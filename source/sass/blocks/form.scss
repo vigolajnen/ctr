@@ -136,7 +136,7 @@
       @include rem(right, 20px);
       transform: rotate(180deg) translateY(50%);
 
-      @include sprite($icon-arrow-close);
+      // @include sprite($icon-arrow-close);
     }
   }
 
@@ -160,7 +160,7 @@
     );
 
     & a {
-      color: $color-blue;
+      color: blue;
       text-decoration: none;
     }
   }
