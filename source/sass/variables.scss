@@ -18,8 +18,10 @@ $text-color: #333333;
 
 
 // шрифты
-$fontCrowdFunded: "Crowd Funded";
-$fontGoogleSans: "Google Sans";
+$OpenSans: "Crowd Funded";
+$Robotolight: "Roboto light";
+$Robotomedium: "Roboto Medium";
 
-$font-base: $fontGoogleSans, "Arial", sans-serif;
-$font-title: $fontCrowdFunded, "Arial", sans-serif;
+$font-base: $Robotolight, "Arial", sans-serif;
+$font-base-medium: $Robotomedium, "Arial", sans-serif;
+$font-title: $OpenSans, "Arial", sans-serif;

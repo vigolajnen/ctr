@@ -33,6 +33,11 @@
 @import "blocks/main-bar.scss";
 @import "blocks/devices.scss";
 @import "blocks/history.scss";
+@import "blocks/block-add.scss";
+@import "blocks/container-list.scss";
+@import "blocks/bl-modal.scss";
+@import "blocks/bl-widgets.scss";
+@import "blocks/widget-preview.scss";
 
 
 
@@ -43,12 +48,12 @@
 
 
 
-@import "blocks/tabs-2.scss";
-@import "blocks/hidden.scss";
+// @import "blocks/tabs-2.scss";
+// @import "blocks/hidden.scss";
 
-@import "blocks/popup.scss";
-@import "blocks/form.scss";
+// @import "blocks/popup.scss";
+// @import "blocks/form.scss";
 
-@import "blocks/fixed.scss";
+// @import "blocks/fixed.scss";
 
-@import "blocks/preloader.scss";
+// @import "blocks/preloader.scss";

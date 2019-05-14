@@ -1,0 +1,47 @@
+.bl-modal {
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: all;
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 100%;
+    @include rem(min-width, 1024px);
+    height: calc(100vh - 50px);
+
+    background-color: #ffffff;
+    user-select: text;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include rem(
+      (
+        padding: 5px 10px,
+        margin-bottom: 25px,
+        min-height: 40px,
+        border-bottom: 1px solid #dddddd
+      )
+    );
+  }
+  &__title {
+    font-family: $font-base-medium;
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        1280px: 16px,
+        1560px: 18px
+      )
+    );
+    color: $color-turquoise;
+  }
+  &__close {
+    background: transparent;
+  }
+}

@@ -1,18 +1,27 @@
 @font-face {
-  font-family: $fontCrowdFunded;
+  font-family: $OpenSans;
   font-display: auto;
-  src: url("../fonts/CrowdFunded-Regular.woff2") format("woff2"),
-    url("../fonts/CrowdFunded-Regular.woff") format("woff");
-  font-weight: 900;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: $fontGoogleSans;
+  font-family: $Robotolight;
   font-display: auto;
-  src: url("../fonts/GoogleSans.woff2") format("woff2"),
-    url("../fonts/GoogleSans.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Robotolight.woff2") format("woff2"),
+    url("../fonts/Robotolight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $Robotomedium;
+  font-display: auto;
+  src: url("../fonts/Robotomedium.woff2") format("woff2"),
+    url("../fonts/Robotomedium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -78,4 +87,24 @@ img {
 
 .overlay {
   overflow: hidden;
+}
+
+.overlay-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  outline: none;
+  z-index: 11;
+  user-select: none;
+}
+
+.overlay-area.on {
+  pointer-events: all;
 }

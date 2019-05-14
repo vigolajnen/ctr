@@ -170,9 +170,8 @@ gulp.task("vendor", function () {
 gulp.task("jsmin", function () {
   gulp
     .src([
-      "source/js/rangeslider.js",
-      "source/js/preloader.js",
       "source/js/scroll.js ",
+      "source/js/scrollbar.js ",
       "source/js/tabs-2.js",
       "source/js/viewportChecker.js"
     ])

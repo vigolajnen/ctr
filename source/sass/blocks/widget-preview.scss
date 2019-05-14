@@ -1,0 +1,21 @@
+.widget-preview {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0 20px 3px #b4b2b2;
+
+  &__header {
+    background: #000000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px 10px;
+  }
+  &__title {
+    color: #ffffff;
+  }
+  &__image {
+    & .picture {
+      width: 100%;
+    }
+  }
+}
