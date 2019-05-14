@@ -1,6 +1,6 @@
 .bl-modal {
   display: none;
-  opacity: 0;
+  // opacity: 0;
   transition: 1s;
   &__overlay {
     position: absolute;
@@ -18,9 +18,8 @@
     background-color: #ffffff;
     user-select: text;
 
-    &--sm {
-      max-width: 1000px;
-      width: 70%;
+    &--gray {
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
   &__header {
@@ -32,11 +31,26 @@
       (
         padding: 5px 15px,
         min-height: 40px,
-        border-bottom: 1px solid #dddddd
+        border-bottom: 1px solid #dddddd,
       )
     );
   }
   &__body {
+    height: 100%;
+    background: #ffffff;
+    &--sm {
+      max-width: 1000px;
+      width: 100%;
+
+      animation-name: slideRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      visibility: visible;
+
+      @include respond-above(md) {
+        width: 70%;
+      }
+    }
     &.scroll-content {
       height: 100%;
       overflow-y: scroll;
@@ -46,16 +60,29 @@
     font-family: $font-base-medium;
     font-weight: 600;
     @include ff(
-      "font-size",
+      'font-size',
       (
         1280px: 16px,
-        1560px: 18px
+        1560px: 18px,
+        1800px: 25px
       )
     );
     color: $color-turquoise;
+
+    @include respond-above(xxlg) {
+      @include rem(padding, 15px 0);
+    }
   }
   &__close {
     background: transparent;
+  }
+  &__icon {
+    @include respond-above(xxlg) {
+      @include rem((
+        width: 30px,
+        height: 30px
+      ));
+    }
   }
   &__btn-box {
     display: flex;
@@ -66,13 +93,18 @@
 }
 
 .bl-modal-show {
-  opacity: 0;
+  // opacity: 0;
   display: block;
 
   animation: show 2s 1;
   animation-fill-mode: forwards;
   animation-delay: 0.3s;
   transition: 1s;
+
+  // animation-name: slideRight;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-in-out;
+  // visibility: visible;
 }
 
 @keyframes show {
@@ -82,5 +114,14 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }

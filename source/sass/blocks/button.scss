@@ -10,19 +10,28 @@
   border: none;
 
   outline: none;
+  background: transparent;
 
-  background: $color-turquoise;
-  @include rem(padding, 5px 10px);
-  color: #ffffff;
+  
 
   &--gray {
+    @include rem(padding, 5px 10px);
+
     background: $color-gray;
+    color: #ffffff;
   }
   &--plus {
     background: transparent;
 
   }
+  &--turquoise {
+    @include rem(padding, 5px 10px);
+    background: $color-turquoise;
+  
+    color: #ffffff;
+  }
   &--white {
+    @include rem(padding, 5px 10px);
     background: #ffffff;
     color: $color-turquoise;
     border: 1px solid $color-turquoise;

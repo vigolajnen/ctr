@@ -4,32 +4,66 @@
 
   @include rem(margin-top, 25px);
 
+  overflow: hidden;
+  overflow-y: auto;
+
   &__sidebar {
-    width: 25%;
+    width: 35%;
     height: 100%;
 
     @include rem(padding, 0 15px);
+
+    @include respond-above(md) {
+      width: 25%;
+    }
+
+    @include respond-above(xxlg) {
+      width: 15%;
+    }
   }
   &__content {
-    width: 75%;
+    width: 63%;
     height: 100%;
 
-    overflow-y: scroll;
+    @include respond-above(md) {
+      width: 75%;
+    }
+
+    @include respond-above(xxlg) {
+      width: 80%;
+    }
+
+    // overflow-y: scroll;
   }
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: column;
+
+    @include rem(padding-top, 5px);
+
+    @include respond-above(md) {
+      flex-direction: row;
+    }
 
     & .widget-preview {
-      width: 50%;
+      width: 95%;
 
       @include rem(
         (
-          max-width: 445px,
-          margin-bottom: 40px
+          // max-width: 445px,
+          margin-bottom: 40px,
         )
       );
+
+      @include respond-above(md) {
+        width: 45%;
+      }
+
+      @include respond-above(xxlg) {
+        width: 30%;
+      }
     }
   }
   &__list {
@@ -43,20 +77,25 @@
     @include rem(
       (
         padding: 8px 0,
-        border-bottom: 1px solid #dddddd
+        border-bottom: 1px solid #dddddd,
       )
     );
 
     cursor: pointer;
+
+    @include respond-above(xxlg) {
+      @include rem(padding, 15px 0);
+    }
   }
   &__name {
     font-family: $font-base-medium;
     font-weight: 500;
     @include ff(
-      "font-size",
+      'font-size',
       (
         1280px: 16px,
-        1560px: 18px
+        1560px: 18px,
+        1800px: 25px
       )
     );
     color: #6a6a6a;

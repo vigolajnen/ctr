@@ -28,9 +28,9 @@
 
     width: 100%;
 
-    @include respond-below(md) {
-      overflow-x: scroll;
-    }
+    // @include respond-below(md) {
+    //   overflow-x: scroll;
+    // }
   }
 
   &__item {
@@ -103,8 +103,8 @@
   }
 }
 
-.tabs__item.active a,
-.tabs__item a:hover {
+.tabs__item.active .tabs__link,
+.tabs__item .tabs__link:hover {
   opacity: 1;
 
   &::before {
@@ -137,7 +137,7 @@
     margin-right: 0;
   }
 
-  .tabs__item a {
+  .tabs__item .tabs__link {
     border-radius: 0;
     opacity: 1;
     top: 0;
