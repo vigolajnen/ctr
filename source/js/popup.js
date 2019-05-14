@@ -1,25 +1,24 @@
 (function() {
-  var popup = document.querySelector(".popup");
-  var popupOverlay = document.querySelector(".popup-overlay");
-  var popupOverlayAkt = document.querySelector(".popup-overlay.popup-js-akt");
-  var popupBtnClose = document.querySelectorAll(".popup-close");
-  var wrapper = document.querySelector(".wrapper");
-
-  var popupOpenmodal = document.querySelectorAll("[data-id=js-popup-btn-mob]");
-  var popupOpenmodalakt = document.querySelectorAll(
-    "[data-id=js-popup-btn-akt]"
+  var popup = document.querySelector(".bl-modal");
+  var popupCode = document.querySelector("[data-id=js-popup-code]");
+  var popupOverlay = popup.querySelector(".bl-modal__overlay");
+  var popupBtnClose = popup.querySelectorAll("[data-id=js-popup-close]");
+  var popupOpenmodal = document.querySelectorAll("[data-id=js-popup-btn]");
+  var popupOpenmodalCode = document.querySelectorAll(
+    "[data-id=js-popup-code-open]"
   );
 
   if (popupBtnClose) {
     popupBtnClose.forEach(function(i) {
       i.addEventListener("click", function(evt) {
         evt.preventDefault();
-        popupOverlay.classList.remove("popup-show");
-        if (popupOverlayAkt) {
-          popupOverlayAkt.classList.remove("popup-show");
+        popup.classList.remove("bl-modal-show");
+        if (popupCode) {
+          document
+            .querySelector("[data-id=js-popup-code]")
+            .classList.remove("bl-modal-show");
         }
-
-        document.querySelector("body").classList.remove("overlay");
+          document.querySelector("body").classList.remove("overlay");
       });
     });
   }
@@ -27,31 +26,22 @@
   if (popupOpenmodal) {
     popupOpenmodal.forEach(function(i) {
       i.addEventListener("click", function(evt) {
-        popupOverlay.classList.add("popup-show");
+        popup.classList.add("bl-modal-show");
         document.querySelector("body").classList.add("overlay");
         //inputName.focus();
       });
     });
   }
 
-  if (popupOpenmodalakt) {
-    popupOpenmodalakt.forEach(function(i) {
+  if (popupOpenmodalCode) {
+    popupOpenmodalCode.forEach(function(i) {
       i.addEventListener("click", function(evt) {
-        popupOverlayAkt.classList.add("popup-show");
+        popupCode.classList.add("bl-modal-show");
         document.querySelector("body").classList.add("overlay");
         //inputName.focus();
       });
     });
   }
 
-  $(".popup-order__input--file").change(function() {
-    if ($(this).val() != "")
-      $(this)
-        .prev()
-        .text("Выбрано файлов: " + $(this)[0].files.length);
-    else
-      $(this)
-        .prev()
-        .text("Прикрепить файл (jpg)");
-  });
+
 })();

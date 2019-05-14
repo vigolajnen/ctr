@@ -13,16 +13,20 @@
 
 <body>
   <div class="wrapper">
-    <div class="content">
+    <div class="content page">
       <!-- контент -->
 
-      <!-- <iframe src="block-add.html" width="100%" height="100%" frameborder="0" allowfullscreen>
-      </iframe> -->
-
-      <iframe src="add-w.html" width="100%" height="100%" frameborder="0" allowfullscreen>
-      </iframe>
-
-
+      <div class="container-list empty">
+        <div class="block-add">
+          <div class="block-add__plus">
+            <button class="button button--plus" data-id="js-popup-btn">
+              <svg class="block-add__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-plus"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
 
 
       <!-- <div class="container-list">
@@ -39,6 +43,9 @@
     </div>
 
     @@include('_include/_page-footer.html')
+
+    @@include('_include/_popup-add-w.html')
+    @@include('_include/_popup-code.html')
 
   </div>
 

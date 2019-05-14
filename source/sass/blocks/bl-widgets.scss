@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
 
+  @include rem(margin-top, 25px);
+
   &__sidebar {
     width: 25%;
     height: 100%;

@@ -173,6 +173,7 @@ gulp.task("jsmin", function () {
       "source/js/scroll.js ",
       "source/js/scrollbar.js ",
       "source/js/tabs-2.js",
+      "source/js/popup.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))

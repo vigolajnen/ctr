@@ -22,4 +22,9 @@
     background: transparent;
 
   }
+  &--white {
+    background: #ffffff;
+    color: $color-turquoise;
+    border: 1px solid $color-turquoise;
+  }
 }

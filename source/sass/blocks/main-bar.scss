@@ -20,16 +20,17 @@
 
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 55%;
+    @include rem(min-width, 700px);
   }
 
   &__left {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
     width: 20%;
+    @include rem(min-width, 300px);
   }
 
   &__link {

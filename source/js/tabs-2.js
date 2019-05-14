@@ -27,8 +27,8 @@ function _arrayWithoutHoles(arr) {
   }
 }
 
-var tabLinks = document.querySelectorAll(".tabs-2__link");
-var tabPanels = document.querySelectorAll(".tabs-2__panel");
+var tabLinks = document.querySelectorAll(".tabs__link");
+var tabPanels = document.querySelectorAll(".tabs__panel");
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
 var _iteratorError = undefined;
@@ -37,9 +37,10 @@ try {
   var _loop = function _loop() {
     var el = _step.value;
     el.addEventListener("click", function(e) {
+      console.log(el);
       e.preventDefault();
-      document.querySelector(".tabs-2__item.active").classList.remove("active");
-      document.querySelector(".tabs-2__panel.active").classList.remove("active");
+      document.querySelector(".tabs__item.active").classList.remove("active");
+      document.querySelector(".tabs__panel.active").classList.remove("active");
       var parentListItem = el.parentElement;
       parentListItem.classList.add("active");
 
