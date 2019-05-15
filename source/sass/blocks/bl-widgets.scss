@@ -18,7 +18,7 @@
     }
 
     @include respond-above(xxlg) {
-      width: 15%;
+      width: 20%;
     }
   }
   &__content {
@@ -48,6 +48,7 @@
     }
 
     & .widget-preview {
+      overflow: hidden;
       width: 95%;
 
       @include rem(
@@ -95,7 +96,7 @@
       (
         1280px: 16px,
         1560px: 18px,
-        1800px: 25px
+        1800px: 22px
       )
     );
     color: #6a6a6a;

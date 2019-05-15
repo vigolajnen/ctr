@@ -21,8 +21,10 @@
 
     justify-content: space-between;
     align-items: center;
+
+    flex-grow: 0.5;
+
     width: 55%;
-    @include rem(min-width, 700px);
   }
 
   &__left {
@@ -30,11 +32,12 @@
     justify-content: space-between;
     align-items: center;
 
+    flex-grow: 0.1;
+
     width: 20%;
-    @include rem(min-width, 300px);
   }
 
-  &__link {
+  &__btn {
     display: flex;
     align-items: center;
 
@@ -44,19 +47,22 @@
     color: #ffffff;
     text-decoration: none;
 
-    &:focus,
-    &:hover {
-      opacity: 0.5;
-      transition: 0.5s;
-    }
+    transition: 1s;
   }
 
-  &__btn {
+  &__btn-action {
     @include rem(margin, 0 5px);
+
+    @include ff(
+      "font-size",
+      (
+        1280px: 12px,
+        1800px: 18px
+      )
+    );
 
     &:focus,
     &:hover {
-      opacity: 0.5;
       transition: 0.5s;
     }
   }
@@ -67,11 +73,31 @@
         width: 30px,
         height: 30px,
         padding: 5px,
-        margin-right: 10px,
+        margin-right: 10px
       )
     );
     background: $color-gray;
 
     fill: $color-turquoise;
+    transition: 1s;
   }
+  &__name {
+    display: none;
+    @include ff(
+      "font-size",
+      (
+        1280px: 12px,
+        1800px: 18px
+      )
+    );
+
+    @media (min-width: 1023px) {
+      display: flex;
+    }
+  }
+}
+
+.main-bar__btn:focus .main-bar__icon,
+.main-bar__btn:hover .main-bar__icon {
+  background: darker($color-gray, 1.5);
 }

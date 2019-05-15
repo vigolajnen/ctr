@@ -19,6 +19,20 @@
   // background-color: #ffffff;
   transition: 0.3s all;
 
+  &--xs {
+    max-width: 700px;
+    width: 100%;
+
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+
+    @include respond-above(md) {
+      width: 40%;
+    }
+  }
+
   &--sm {
     max-width: 1000px;
     width: 100%;
@@ -69,8 +83,16 @@
     );
   }
   &__body {
-    height: calc(100vh - 90px);
+    @include rem(padding, 15px);
+    height: calc(100% - 90px);
     background: #ffffff;
+
+    @include respond-above(xxlg) {
+      height: calc(100% - 115px);
+    }
+    &--no-pg {
+      padding: 0;
+    }
 
     &.scroll-content {
       overflow-y: scroll;
@@ -174,8 +196,6 @@
   animation-timing-function: ease-in-out;
 }
 
-.bl-modal__body.bl-modal__body--right {
+.bl-modal__body.bl-modal__body--height {
   height: calc(100vh - 50px);
-
-
 }

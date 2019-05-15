@@ -10,6 +10,20 @@
   &__caption {
     font-size: 12px;
     color: #ffffff;
+
+    display: none;
+
+    @include ff(
+      'font-size',
+      (
+        1280px: 12px,
+        1800px: 18px
+      )
+    );
+
+    @media (min-width: 1023px) {
+      display: flex;
+    }
   }
   &__link {
     display: flex;
