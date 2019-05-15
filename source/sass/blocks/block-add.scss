@@ -5,11 +5,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 100px);
+  // height: calc(100vh - 100px); если первый блок
+  margin-top: -50px;
+  bottom: -30px;
 
   &__plus {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
 
     & .button {
       &:focus,

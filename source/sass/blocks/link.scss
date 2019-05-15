@@ -1,6 +1,12 @@
 .link {
+  line-height: normal;
   font-weight: 600;
-
   text-decoration: none;
-}
 
+  &--white-btn {
+    padding: 20px 30px;
+    color: $text-color;
+    background-color: #ffffff;
+    border-radius: 40px;
+  }
+}
