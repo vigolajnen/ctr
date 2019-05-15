@@ -50,4 +50,14 @@
       border: 1px solid darker($color-turquoise, 1.5);
     }
   }
+  &--red {
+    @include rem(padding, 10px 20px);
+    color: #ffffff;
+    background: #ff8080;
+
+    &:focus,
+    &:hover {
+      background: darker(#ff8080, 1.5);
+    }
+  }
 }
