@@ -25,7 +25,7 @@
           '.js-iframe[data-modal="' + modalId + '"]'
         );
         modalIframe.classList.add("active");
-        console.log(modalIframe.contentWindow.document.querySelector(".js-bl-modal-close"));
+        console.log(modalIframe.contentWindow.document.querySelector(".js-bl-modal-btn"));
 
         var modalElem = modalIframe.contentWindow.document.querySelector('.bl-modal[data-modal="' + modalId + '"]');
 
