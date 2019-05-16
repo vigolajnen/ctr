@@ -23,7 +23,9 @@
   }
   &__content {
     width: 63%;
-    height: 100%;
+    // height: 100%;
+    height: 85vh;
+    overflow: hidden;
 
     @include respond-above(md) {
       width: 75%;

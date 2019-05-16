@@ -1,9 +1,10 @@
-.tabs {
+.subtabs {
   display: flex;
   flex-direction: column;
   max-width: 100%;
   height: 100%;
   // width: 100%;
+  margin-top: -25px;
 
   overflow: hidden;
 
@@ -56,8 +57,8 @@
     @include ff(
       "font-size",
       (
-        375px: 15px,
-        1440px: 17px
+        375px: 13px,
+        1440px: 15px
       )
     );
 
@@ -112,8 +113,8 @@
   }
 }
 
-.tabs__item.active .tabs__link,
-.tabs__item .tabs__link:hover {
+.subtabs__item.active .subtabs__link,
+.subtabs__item .subtabs__link:hover {
   opacity: 1;
 
   &::before {
@@ -121,59 +122,58 @@
   }
 }
 
-.tabs__panel {
+.subtabs__panel {
   display: none;
 }
 
-.tabs__panel.active {
+.subtabs__panel.active {
   display: block;
-  height: 100%;
 }
 
-.tabs__panel p + div {
+.subtabs__panel p + div {
   @include rem(margin-top, 15px);
 }
 
 @media screen and (max-width: 600px) {
-  .tabs {
+  .subtabs {
     flex-direction: column;
   }
 
-  .tabs__item {
+  .subtabs__item {
     width: 100%;
   }
 
-  .tabs__item:not(:last-child) {
+  .subtabs__item:not(:last-child) {
     margin-right: 0;
   }
 
-  .tabs__item .tabs__link {
+  .subtabs__item .subtabs__link {
     border-radius: 0;
     opacity: 1;
     top: 0;
   }
 
-  .tabs__content {
+  .subtabs__content {
     border-radius: 0;
   }
 }
 
-.tabs__settings {
+.subtabs__settings {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.tabs__settings-list {
+.subtabs__settings-list {
   @include listReset();
   width: 45%;
 }
-.tabs__settings-item {
+.subtabs__settings-item {
   margin-bottom: 10px;
   width: 100%;
 }
 
-.tabs__settings-val {
+.subtabs__settings-val {
   width: 100%;
   padding: 10px;
   padding-left: 40px;
@@ -199,7 +199,7 @@
   }
 }
 
-.tabs__settings-label {
+.subtabs__settings-label {
   @include ff(
     "font-size",
     (
@@ -234,7 +234,7 @@
   }
 }
 
-.tabs__settings-checkbox:checked + .tabs__settings-label::before {
+.subtabs__settings-checkbox:checked + .subtabs__settings-label::before {
   content: "\2714";
   position: absolute;
   z-index: 1;

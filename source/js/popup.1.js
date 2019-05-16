@@ -5,6 +5,7 @@
     var modalButtons = document.querySelectorAll(".js-bl-modal-btn"),
       overlay = document.querySelector(".js-overlay-bl-modal"),
       closeButtons = document.querySelectorAll(".js-bl-modal-close");
+    var iframeDocs = document.querySelectorAll(".js-iframe");
 
     /* Перебираем массив кнопок */
     modalButtons.forEach(function(item) {
@@ -15,12 +16,22 @@
             Нужно подстраховаться. */
         e.preventDefault();
 
+        iframeDocs.forEach(function(iframe) {});
+
         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
-        var modalId = this.getAttribute("data-modal"),
-          modalElem = document.querySelector(
-            '.bl-modal[data-modal="' + modalId + '"]'
-          );
+        var modalId = this.getAttribute("data-modal");
+
+        var modalIframe = document.querySelector(
+          '.js-iframe[data-modal="' + modalId + '"]'
+        );
+        modalIframe.classList.add("active");
+        // modalIframe.contentWindow.addEventListener;
+        console.log(modalIframe);
+
+        var modalElem = document.querySelector(
+          '.bl-modal[data-modal="' + modalId + '"]'
+        );
 
         /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
@@ -29,14 +40,14 @@
       }); // end click
     }); // end foreach
 
-    closeButtons.forEach(function(item) {
-      item.addEventListener("click", function(e) {
-        var parentModal = this.closest(".bl-modal");
+    // closeButtons.forEach(function(item) {
+    //   item.addEventListener("click", function(e) {
+    //     var parentModal = this.closest(".bl-modal");
 
-        parentModal.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    }); // end foreach
+    //     parentModal.classList.remove("active");
+    //     overlay.classList.remove("active");
+    //   });
+    // }); // end foreach
 
     document.body.addEventListener(
       "keyup",
@@ -58,5 +69,30 @@
       this.classList.remove("active");
     });
 
+    // var iframeAdd = document.querySelector(".js-iframe-add-w");
+    // var iframeCode = document.querySelector(".js-iframe-code");
+    // var iframeSettings = document.querySelector(".js-iframe-settings");
+    // var iframeStructure = document.querySelector(".js-iframe-structure");
+    // var iframeImages = document.querySelector(".js-iframe-images");
+    // var iframeBledit = document.querySelector(".js-iframe-bl-edit");
+
+    // if (iframeAdd) {
+    //   var iframe = iframeAdd.contentWindow;
+    //   console.log(iframe);
+    //   iframe.addEventListener("click", function(e) {
+    //     var target = e.target;
+    //     console.log(target.parentNode);
+    //     if (target.parentNode.classList.contains("js-bl-modal-close")) {
+    //       closeButtons.forEach(function(item) {
+    //         item.addEventListener("click", function(e) {
+    //           var parentModal = this.closest(".bl-modal");
+
+    //           parentModal.classList.remove("active");
+    //           overlay.classList.remove("active");
+    //         });
+    //       });
+    //     }
+    //   });
+    // }
   }); // end ready
 })();

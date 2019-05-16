@@ -51,6 +51,36 @@
     }
   }
 
+  &__wrap {
+    &--xs {
+    max-width: 700px;
+    width: 100%;
+
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+
+    @include respond-above(md) {
+      width: 40%;
+    }
+  }
+
+  &--sm {
+    max-width: 1000px;
+    width: 100%;
+
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+
+    @include respond-above(md) {
+      width: 70%;
+    }
+  }
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
