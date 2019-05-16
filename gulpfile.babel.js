@@ -160,7 +160,6 @@ gulp.task("vendor", function () {
       "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
-      "source/js/libs/jquery.viewportchecker.min.js",
       "source/js/libs/jquery.scrollbar.min.js"
     ])
     .pipe(concat("vendor.min.js"))
@@ -170,11 +169,10 @@ gulp.task("vendor", function () {
 gulp.task("jsmin", function () {
   gulp
     .src([
-      "source/js/scroll.js ",
       "source/js/scrollbar.js ",
       "source/js/tabs-2.js",
       "source/js/popup.js",
-      "source/js/viewportChecker.js"
+      "source/js/bl-controls.js"
     ])
     .pipe(concat("main.min.js"))
     .pipe(

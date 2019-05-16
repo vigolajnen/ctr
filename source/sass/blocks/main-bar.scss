@@ -80,6 +80,10 @@
 
     fill: $color-turquoise;
     transition: 1s;
+
+    &--left {
+      transform: scale(-1, 1);
+    }
   }
   &__name {
     display: none;
