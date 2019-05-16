@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>К</title>
+    @@include('_include/_head-meta.html')
+    <link rel="preload" href="fonts/Robotolight.woff2" as="font" />
+    <link rel="preload" href="fonts/Robotomedium.woff2" as="font" />
+    <link rel="preload" href="fonts/opensans.woff2" as="font" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>К</title>
-  @@include('_include/_head-meta.html')
-  <link rel="preload" href="fonts/Robotolight.woff2" as="font" />
-  <link rel="preload" href="fonts/Robotomedium.woff2" as="font" />
-  <link rel="preload" href="fonts/opensans.woff2" as="font" />
-  <link rel="stylesheet" href="css/style.min.css" />
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="content page">
+        <!-- контент -->
 
-<body>
-  <div class="wrapper">
-    <div class="content page">
-      <!-- контент -->
-
-      <!-- <div class="container-list empty">
+        <!-- <div class="container-list empty">
         <div class="block-add">
           <div class="block-add__plus">
             <button class="button button--plus js-bl-modal-btn" data-modal="1">
@@ -28,150 +27,204 @@
         </div>
       </div> -->
 
-
-      <div class="container-list">
-        <div class="block-w">
-          <div class="container-fluid">
-            <div class="component-bg bg-image">
-              <div class="bg-image__box">
-                <div class="bg-image__pic" style="background-image: url('img/bg/w-bg.jpg')"></div>
+        <div class="container-list">
+          <div class="block-w">
+            <div class="container-fluid">
+              <div class="component-bg bg-image">
+                <div class="bg-image__box">
+                  <div
+                    class="bg-image__pic"
+                    style="background-image: url('img/bg/w-bg.jpg')"
+                  ></div>
+                </div>
+              </div>
+              <div class="compotent-bl-text bl-text">
+                <div class="bl-text__inner">
+                  <h1 class="title">Какой отпуск вам подходит?</h1>
+                  <p class="bl-text__intro">
+                    Пройдите тест, чтобы определить какой тур вам придется по
+                    душе сейчас больше всего.
+                  </p>
+                  <a class="link link--white-btn" href="#">Пройти тест</a>
+                </div>
               </div>
             </div>
-            <div class="compotent-bl-text bl-text">
-              <div class="bl-text__inner">
-                <h1 class="title">Какой отпуск вам подходит?</h1>
-                <p class="bl-text__intro">Пройдите тест, чтобы определить какой тур вам придется по душе сейчас больше
-                  всего.</p>
-                <a class="link link--white-btn" href="#">Пройти тест</a>
+            <div class="block-control">
+              <div class="block-control__group">
+                <div class="block-control__item">
+                  <button
+                    class="button block-control__btn js-bl-modal-btn"
+                    aria-label="Редактировать"
+                    data-modal="6"
+                  >
+                    <svg class="block-control__icon" width="15" height="15">
+                      <use xlink:href="img/sprite.svg#icon-pencil"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="block-control__item">
+                  <div class="block-control__box-btn">
+                    <button
+                      class="button block-control__btn block-control__btn--arrow"
+                      aria-label="Стрелка вверх"
+                    >
+                      <svg
+                        class="block-control__icon block-control__icon--1"
+                        width="15"
+                        height="10"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="button block-control__btn block-control__btn--arrow"
+                      aria-label="Стрелка вниз"
+                    >
+                      <svg class="block-control__icon" width="15" height="10">
+                        <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="block-control__item">
+                  <button
+                    class="button block-control__btn"
+                    aria-label="Настройки"
+                  >
+                    <svg class="block-control__icon" width="15" height="15">
+                      <use xlink:href="img/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="block-control__item">
+                  <button
+                    class="button block-control__btn"
+                    aria-label="Дополнительно"
+                  >
+                    <svg
+                      class="block-control__icon block-control__icon--dots"
+                      width="15"
+                      height="15"
+                    >
+                      <use xlink:href="img/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
+                  <div class="block-control__dropdown dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <button class="button dropdown__btn">
+                          <svg class="dropdown__icon" width="15" height="15">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                          <span class="dropdown__name">Отключить</span>
+                        </button>
+                      </li>
+                      <li class="dropdown__item">
+                        <button class="button dropdown__btn">
+                          <svg class="dropdown__icon" width="15" height="15">
+                            <use xlink:href="img/sprite.svg#icon-copy"></use>
+                          </svg>
+                          <span class="dropdown__name">Скопировать</span>
+                        </button>
+                      </li>
+                      <li class="dropdown__item">
+                        <button class="button dropdown__btn">
+                          <svg class="dropdown__icon" width="15" height="15">
+                            <use
+                              xlink:href="img/sprite.svg#icon-basket-2"
+                            ></use>
+                          </svg>
+                          <span class="dropdown__name">Удалить</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="block-control">
-            <div class="block-control__group">
-              <div class="block-control__item">
-                <button class="button block-control__btn js-bl-modal-btn" aria-label="Редактировать" data-modal="6">
-                  <svg class="block-control__icon" width="15" height="15">
-                    <use xlink:href="img/sprite.svg#icon-pencil"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="block-control__item">
-                <div class="block-control__box-btn">
-                  <button class="button block-control__btn block-control__btn--arrow" aria-label="Стрелка вверх">
-                    <svg class="block-control__icon block-control__icon--1" width="15" height="10">
-                      <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
-                    </svg>
-                  </button>
-                  <button class="button block-control__btn block-control__btn--arrow" aria-label="Стрелка вниз">
-                    <svg class="block-control__icon" width="15" height="10">
-                      <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="block-control__item">
-                <button class="button block-control__btn" aria-label="Настройки">
-                  <svg class="block-control__icon" width="15" height="15">
-                    <use xlink:href="img/sprite.svg#icon-settings"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="block-control__item">
-                <button class="button block-control__btn" aria-label="Дополнительно">
-                  <svg class="block-control__icon block-control__icon--dots" width="15" height="15">
-                    <use xlink:href="img/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-                <div class="block-control__dropdown dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">
-                      <button class="button dropdown__btn">
-                        <svg class="dropdown__icon" width="15" height="15">
-                          <use xlink:href="img/sprite.svg#icon-eye"></use>
-                        </svg>
-                        <span class="dropdown__name">Отключить</span>
-                      </button>
-                    </li>
-                    <li class="dropdown__item">
-                      <button class="button dropdown__btn">
-                        <svg class="dropdown__icon" width="15" height="15">
-                          <use xlink:href="img/sprite.svg#icon-copy"></use>
-                        </svg>
-                        <span class="dropdown__name">Скопировать</span>
-                      </button>
-                    </li>
-                    <li class="dropdown__item">
-                      <button class="button dropdown__btn">
-                        <svg class="dropdown__icon" width="15" height="15">
-                          <use xlink:href="img/sprite.svg#icon-basket-2"></use>
-                        </svg>
-                        <span class="dropdown__name">Удалить</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+          <div class="block-add">
+            <div class="block-add__plus">
+              <button
+                class="button button--plus js-bl-modal-btn"
+                data-modal="1"
+              >
+                <svg class="block-add__icon" width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="block-add">
-          <div class="block-add__plus">
-            <button class="button button--plus js-bl-modal-btn" data-modal="1">
-              <svg class="block-add__icon" width="15" height="15">
-                <use xlink:href="img/sprite.svg#icon-plus"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <!-- контент -->
       </div>
 
+      @@include('_include/_page-footer.html')
 
-
-
-      <!-- контент -->
-    </div>
-
-    @@include('_include/_page-footer.html')
-
-    <!-- @@include('_include/_popup-add-w.html')
+      <!-- @@include('_include/_popup-add-w.html')
     @@include('_include/_popup-code.html')
     @@include('_include/_popup-settings.html')
     @@include('_include/_popup-structure.html')
     @@include('_include/_popup-images.html')
     @@include('_include/_popup-bl-edit.html') -->
 
-    <!-- <div class="bl-modal" data-modal="1"> -->
-      <iframe class="js-iframe" data-modal="1" src="add-w.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
-    <!-- <div class="bl-modal" data-modal="2"> -->
-      <iframe class="js-iframe" data-modal="2" src="code.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
-    <!-- <div class="bl-modal bl-modal--sm" data-modal="3"> -->
-      <iframe class="js-iframe" data-modal="3" src="settings.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
-    <!-- <div class="bl-modal bl-modal--xs" data-modal="4"> -->
-      <iframe class="js-iframe" data-modal="4" src="structure.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
-    <!-- <div class="bl-modal bl-modal--sm" data-modal="5"> -->
-      <iframe class="js-iframe" data-modal="5" src="images.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
-    <!-- <div class="bl-modal bl-modal--sm" data-modal="6"> -->
-      <iframe class="js-iframe" data-modal="6" src="bl-edit.html" width="100%" height="100%" frameborder="0"></iframe>
-    <!-- </div> -->
+      <iframe
+        class="js-iframe"
+        data-modal="1"
+        src="add-w.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
+      <iframe
+        class="js-iframe"
+        data-modal="2"
+        src="code.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
+      <iframe
+        class="js-iframe"
+        data-modal="3"
+        src="settings.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
+      <iframe
+        class="js-iframe"
+        data-modal="4"
+        src="structure.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
+      <iframe
+        class="js-iframe"
+        data-modal="5"
+        src="images.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
+      <iframe
+        class="js-iframe"
+        data-modal="6"
+        src="bl-edit.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
+    </div>
 
-
-    <!-- Подложка под модальным окном -->
-    <div class="overlay js-overlay-bl-modal"></div>
-
-  </div>
-
-  @@include('_include/_script.html')
-</body>
-
+    @@include('_include/_script.html')
+  </body>
 </html>

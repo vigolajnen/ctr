@@ -5,7 +5,6 @@
     var modalButtons = document.querySelectorAll(".js-bl-modal-btn"),
       overlay = document.querySelector(".js-overlay-bl-modal"),
       closeButtons = document.querySelectorAll(".js-bl-modal-close");
-    var iframeDocs = document.querySelectorAll(".js-iframe");
 
     /* Перебираем массив кнопок */
     modalButtons.forEach(function(item) {
@@ -16,27 +15,33 @@
             Нужно подстраховаться. */
         e.preventDefault();
 
-        iframeDocs.forEach(function(iframe) {});
 
         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
         var modalId = this.getAttribute("data-modal");
 
+
         var modalIframe = document.querySelector(
           '.js-iframe[data-modal="' + modalId + '"]'
         );
         modalIframe.classList.add("active");
-        // modalIframe.contentWindow.addEventListener;
-        console.log(modalIframe);
+        console.log(modalIframe.contentWindow.document.querySelector(".js-bl-modal-close"));
 
-        var modalElem = document.querySelector(
-          '.bl-modal[data-modal="' + modalId + '"]'
-        );
+        var modalElem = modalIframe.contentWindow.document.querySelector('.bl-modal[data-modal="' + modalId + '"]');
 
+        
         /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
         modalElem.classList.add("active");
-        overlay.classList.add("active");
+        modalIframe.contentWindow.document.querySelector(".js-overlay-bl-modal").classList.add("active");
+
+        modalIframe.contentWindow.document.querySelector(".js-bl-modal-close").addEventListener('click', function (evt) {
+          console.log(evt.target);
+          modalElem.classList.remove("active");
+          modalIframe.contentWindow.document.querySelector(".js-overlay-bl-modal").classList.remove("active");
+          modalIframe.classList.remove("active");
+        });
+
       }); // end click
     }); // end foreach
 
@@ -64,10 +69,10 @@
       false
     );
 
-    overlay.addEventListener("click", function() {
-      document.querySelector(".bl-modal.active").classList.remove("active");
-      this.classList.remove("active");
-    });
+    // overlay.addEventListener("click", function() {
+    //   document.querySelector(".bl-modal.active").classList.remove("active");
+    //   this.classList.remove("active");
+    // });
 
     // var iframeAdd = document.querySelector(".js-iframe-add-w");
     // var iframeCode = document.querySelector(".js-iframe-code");

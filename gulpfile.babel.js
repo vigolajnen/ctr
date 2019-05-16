@@ -169,7 +169,7 @@ gulp.task("js-main", function () {
   gulp
     .src([
       "source/js/tabs-2.js",
-      "source/js/popup.js",
+      "source/js/popup.1.js",
       "source/js/bl-controls.js"
     ])
     .pipe(concat("main.min.js"))
