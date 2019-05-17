@@ -32,7 +32,10 @@
         
         /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
-        modalElem.classList.add("active");
+        if(modalElem) {
+          modalElem.classList.add("active");
+        }
+        
         modalIframe.contentWindow.document.querySelector(".js-overlay-bl-modal").classList.add("active");
 
         modalIframe.contentWindow.document.querySelector(".js-bl-modal-close").addEventListener('click', function (evt) {
