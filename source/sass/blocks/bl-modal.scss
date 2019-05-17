@@ -133,6 +133,8 @@
     }
   }
   &__title {
+    display: flex;
+    align-items: center;
     font-family: $font-base-medium;
     font-weight: 600;
     @include ff(
@@ -148,6 +150,10 @@
     @include respond-above(xxlg) {
       @include rem(padding, 15px 0);
     }
+  }
+  &__title-icon {
+    @include rem(margin-right, 10px);
+    fill: $color-turquoise;
   }
   &__close {
     background: transparent;

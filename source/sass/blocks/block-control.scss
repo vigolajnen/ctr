@@ -53,6 +53,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 0;
     width: 100%;
     height: 100%;
@@ -64,6 +69,7 @@
 
     opacity: 0.6;
     transition: 1s;
+    cursor: pointer;
     &--arrow {
       height: 50%;
       border-radius: 0;
