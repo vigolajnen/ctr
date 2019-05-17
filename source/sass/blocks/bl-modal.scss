@@ -181,24 +181,7 @@
   display: block;
 }
 
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
 
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(-150%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 
 .overlay {
   /* Скрываем подложку  */
@@ -236,6 +219,36 @@
   animation-timing-function: ease-in-out;
 }
 
+.bl-modal.anim-hover.active {
+  display: block;
+
+  animation: show 1s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  transition: 1s;
+
+}
+
 .bl-modal__body.bl-modal__body--height {
   height: calc(100vh - 50px);
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

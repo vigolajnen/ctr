@@ -157,7 +157,6 @@ gulp.task("html-2", function () {
 gulp.task("vendor", function () {
   gulp
     .src([
-      "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js"
     ])
@@ -184,8 +183,6 @@ gulp.task("js-main", function () {
 gulp.task("js-controls", function() {
   gulp
     .src([
-      "source/js/tabs-2.js",
-      "source/js/popup.js",
       "source/js/bl-controls.js"
     ])
     .pipe(concat("controls.min.js"))
