@@ -8,7 +8,7 @@
 
 // @import "libs/fancybox.scss";
 // @import "libs/rangeslider.scss";
-@import "libs/jquery.scrollbar.scss";
+// @import "libs/jquery.scrollbar.scss";
 // @import "libs/fileinput.scss";
 
 // @import "libs/jquery-ui.scss";
@@ -24,7 +24,7 @@
 // @import "sprite-png.scss";
 @import "blocks/sprite.scss";
 
-@import "blocks/page-header.scss";
+// @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
 
 @import "blocks/button.scss";
@@ -52,11 +52,7 @@
 @import "blocks/block-control.scss";
 @import "blocks/dropdown.scss";
 @import "blocks/bl-edit-form.scss";
-
-
-
-
-
+@import "blocks/device-box.scss";
 
 
 
@@ -64,9 +60,10 @@
 
 @import "blocks/tabs.scss";
 @import "blocks/subtabs.scss";
-// @import "blocks/hidden.scss";
-
 @import "blocks/popup.scss";
+
+
+// @import "blocks/hidden.scss";
 // @import "blocks/form.scss";
 
 // @import "blocks/fixed.scss";
