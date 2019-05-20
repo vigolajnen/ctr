@@ -169,7 +169,8 @@ gulp.task("js-main", function () {
     .src([
       "source/js/tabs-2.js",
       "source/js/popup.1.js",
-      "source/js/bl-controls.js"
+      "source/js/bl-controls.js",
+      "source/js/widget.min.js"
     ])
     .pipe(concat("main.min.js"))
     .pipe(
@@ -183,9 +184,9 @@ gulp.task("js-main", function () {
 gulp.task("js-controls", function() {
   gulp
     .src([
-      "source/js/bl-controls.js"
+      "source/js/iframes/widget.js"
     ])
-    .pipe(concat("controls.min.js"))
+    .pipe(concat("widget.min.js"))
     .pipe(
       uglify({
         mangle: false

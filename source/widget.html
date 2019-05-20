@@ -77,10 +77,7 @@
             </span>
           </div>
           <div class="block-control__item">
-            <span
-              class="block-control__btn"
-              aria-label="Дополнительно"
-            >
+            <span class="block-control__btn" aria-label="Дополнительно">
               <svg
                 class="block-control__icon block-control__icon--dots"
                 width="15"
@@ -123,5 +120,24 @@
     </div>
 
     @@include('_include/_script.html')
+    <script>
+      (function() {
+        var widgetButton = document.querySelector("span[data-modal='6']");
+        widgetButton.addEventListener('click', function(evt) {
+          evt.preventDefault();
+          
+          parent.postMessage(
+            {
+              source: 0,
+              type: 'edit',
+              target: 6,
+            },
+            '*',
+          );
+        });
+
+      })();
+    </script>
+
   </body>
 </html>

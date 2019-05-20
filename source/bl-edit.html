@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>К</title>
+    @@include('_include/_head-meta.html')
+    <link rel="preload" href="fonts/Robotolight.woff2" as="font" />
+    <link rel="preload" href="fonts/Robotomedium.woff2" as="font" />
+    <link rel="preload" href="fonts/opensans.woff2" as="font" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>К</title>
-  @@include('_include/_head-meta.html')
-  <link rel="preload" href="fonts/Robotolight.woff2" as="font" />
-  <link rel="preload" href="fonts/Robotomedium.woff2" as="font" />
-  <link rel="preload" href="fonts/opensans.woff2" as="font" />
-  <link rel="stylesheet" href="css/style.min.css" />
-</head>
+  <body>
+    <div class="wrapper">
+      @@include('_include/_popup-bl-edit.html')
 
-<body>
-  <div class="wrapper">
+      <!-- Подложка под модальным окном -->
+      <div class="overlay js-overlay-bl-modal"></div>
+    </div>
 
-    @@include('_include/_popup-bl-edit.html')
+    @@include('_include/_script.html')
 
-    <!-- Подложка под модальным окном -->
-    <div class="overlay js-overlay-bl-modal"></div>
+    <script>
+      (function() {
+        document.querySelector('.js-bl-modal-btn').addEventListener('click', function(evt) {
+          console.log(evt);
 
-  </div>
-
-  @@include('_include/_script.html')
-</body>
-
+          parent.postMessage({
+            source: 6,
+            type: "upload",
+            target: 5
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
