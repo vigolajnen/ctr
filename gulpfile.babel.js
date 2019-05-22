@@ -164,13 +164,10 @@ gulp.task("vendor", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("js-main", function () {
+gulp.task("main", function () {
   gulp
     .src([
-      "source/js/tabs-2.js",
-      "source/js/popup.1.js",
-      "source/js/bl-controls.js",
-      "source/js/widget.min.js"
+      "source/js/index.js"
     ])
     .pipe(concat("main.min.js"))
     .pipe(
@@ -181,25 +178,9 @@ gulp.task("js-main", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("js-controls", function() {
+gulp.task("tabs", function() {
   gulp
-    .src([
-      "source/js/iframes/widget.js"
-    ])
-    .pipe(concat("widget.min.js"))
-    .pipe(
-      uglify({
-        mangle: false
-      })
-    )
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("js-tabs", function() {
-  gulp
-    .src([
-      "source/js/tabs-2.js"
-    ])
+    .src(["source/js/tabs-2.js"])
     .pipe(concat("tabs.min.js"))
     .pipe(
       uglify({
@@ -209,13 +190,10 @@ gulp.task("js-tabs", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("js-popup", function() {
+gulp.task("controls", function() {
   gulp
-    .src([
-      // "source/js/popup.js",
-      "source/js/popup.1.js"
-    ])
-    .pipe(concat("popup.min.js"))
+    .src(["source/js/controls.js"])
+    .pipe(concat("controls.min.js"))
     .pipe(
       uglify({
         mangle: false
@@ -223,6 +201,123 @@ gulp.task("js-popup", function() {
     )
     .pipe(gulp.dest("build/js"));
 });
+
+gulp.task("widget", function() {
+  gulp
+    .src(["source/js/iframes/widget.js"])
+    .pipe(concat("widget.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+gulp.task("edit", function() {
+  gulp
+    .src(["source/js/iframes/edit.js"])
+    .pipe(concat("edit.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+gulp.task("js-images", function() {
+  gulp
+    .src(["source/js/iframes/images.js"])
+    .pipe(concat("images.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+gulp.task("js-code", function() {
+  gulp
+    .src(["source/js/iframes/code.js"])
+    .pipe(concat("code.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+gulp.task("js-add", function() {
+  gulp
+    .src(["source/js/iframes/add.js"])
+    .pipe(concat("add.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+gulp.task("js-settings", function() {
+  gulp
+    .src(["source/js/iframes/settings.js"])
+    .pipe(concat("settings.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+gulp.task("js-structure", function() {
+  gulp
+    .src(["source/js/iframes/structure.js"])
+    .pipe(concat("structure.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+gulp.task("js-phone", function() {
+  gulp
+    .src(["source/js/iframes/phone.js"])
+    .pipe(concat("phone.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+gulp.task("js-tablet", function() {
+  gulp
+    .src(["source/js/iframes/tablet.js"])
+    .pipe(concat("tablet.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+gulp.task("js-laptop", function() {
+  gulp
+    .src(["source/js/iframes/laptop.js"])
+    .pipe(concat("laptop.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+
 
 
 
@@ -238,10 +333,18 @@ gulp.task("serve", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch(
     "source/js/**/*.js",
-    ["js-main"],
-    ["js-tabs"],
-    ["js-popup"],
-    ["js-controls"]
+    ["main"],
+    ["tabs"],
+    ["controls"],
+    ["edit"],
+    ["js-images"],
+    ["js-add"],
+    ["js-settings"],
+    ["js-structure"],
+    ["js-phone"],
+    ["js-tablet"],
+    ["js-laptop"],
+    ["widget"]
   );
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
@@ -255,10 +358,19 @@ gulp.task("build", function (done) {
     "sprite",
     "html",
     "vendor",
-    "js-main",
-    "js-tabs",
-    "js-popup",
-    "js-controls",
+    "main",
+    "tabs",
+    "controls",
+    "widget",
+    "edit",
+    "js-code",
+    "js-add",
+    "js-settings",
+    "js-structure",
+    "js-phone",
+    "js-tablet",
+    "js-laptop",
+    "js-images",
     done
   );
 });

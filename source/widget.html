@@ -119,25 +119,10 @@
       </div>
     </div>
 
-    @@include('_include/_script.html')
-    <script>
-      (function() {
-        var widgetButton = document.querySelector("span[data-modal='6']");
-        widgetButton.addEventListener('click', function(evt) {
-          evt.preventDefault();
-          
-          parent.postMessage(
-            {
-              source: 0,
-              type: 'edit',
-              target: 6,
-            },
-            '*',
-          );
-        });
+    <!-- @@include('_include/_script.html') -->
 
-      })();
-    </script>
+    <script src="js/controls.min.js"></script>
+    <script src="js/iframes/widget.min.js"></script>
 
   </body>
 </html>

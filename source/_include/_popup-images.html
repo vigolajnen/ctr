@@ -3,10 +3,10 @@
     <div class="tabs">
       <div class="tabs__box">
         <ul class="tabs__list">
-          <li class="tabs__item active">
+          <li class="tabs__item js-tab-trigger active" data-tab="1">
             <button class="button tabs__link">Мои изображения</button>
           </li>
-          <li class="tabs__item">
+          <li class="tabs__item js-tab-trigger" data-tab="2">
             <button class="button tabs__link">Библиотека изображений</button>
           </li>
         </ul>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="tabs__content scroll-content">
-        <div class="tabs__panel active" data-index="0">
+        <div class="tabs__panel js-tab-content active" data-tab="1">
           <div class="tabs__content-inner">
             <div class="bl-gallery">
               <div class="bl-gallery__sidebar">
@@ -207,7 +207,7 @@
             </div>
           </div>
         </div>
-        <div class="tabs__panel" data-index="1">
+        <div class="tabs__panel js-tab-content" data-tab="2">
           <div class="tabs__content-inner">
             2
           </div>

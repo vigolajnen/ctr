@@ -18,20 +18,9 @@
       <div class="overlay js-overlay-bl-modal"></div>
     </div>
 
-    @@include('_include/_script.html')
+    <!-- @@include('_include/_script.html') -->
 
-    <script>
-      (function() {
-        document.querySelector('.js-bl-modal-btn').addEventListener('click', function(evt) {
-          console.log(evt);
-
-          parent.postMessage({
-            source: 6,
-            type: "upload",
-            target: 5
-          });
-        });
-      })();
-    </script>
+    <script src="js/tabs.min.js"></script>
+    <script src="js/iframes/edit.min.js"></script>
   </body>
 </html>
