@@ -14,9 +14,6 @@ var iframes = [
   createIframe("structure", "structure.html"),
   createIframe("images", "images.html"),
   createIframe("edit", "bl-edit.html"),
-  createIframe("phone", "phone.html"),
-  createIframe("tablet", "tablet.html"),
-  createIframe("laptop", "laptop.html"),
   createIframe("widget", "widget.html")
 ];
 
@@ -27,7 +24,7 @@ var iframes = [
       btn.addEventListener("click", function(evt) {
         evt.preventDefault();
         var idBtn = this.getAttribute("data-modal");
-        console.log(idBtn);
+        // console.log(idBtn);
 
           if (idBtn == 2) {
             document
@@ -66,32 +63,23 @@ var iframes = [
                 .classList.add("active");
             };
           } else if (idBtn == 7) {
-            document
-              .querySelector(".wrapper")
-              .appendChild(iframes[6]);
-            iframes[6].onload = function() {
-              iframes[6].contentWindow.document
-                .querySelector(".bl-modal")
-                .classList.add("active");
-            };
+            document.querySelector('.wrapper').classList.add('container-xs');
+            document.querySelector('.wrapper').classList.remove('container-sm');
           } else if (idBtn == 8) {
             document
               .querySelector(".wrapper")
-              .appendChild(iframes[7]);
-            iframes[7].onload = function() {
-              iframes[7].contentWindow.document
-                .querySelector(".bl-modal")
-                .classList.add("active");
-            };
+              .classList.add("container-sm");
+              document
+                .querySelector(".wrapper")
+                .classList.remove("container-xs");
           } else if (idBtn == 9) {
             document
               .querySelector(".wrapper")
-              .appendChild(iframes[8]);
-            iframes[8].onload = function() {
-              iframes[8].contentWindow.document
-                .querySelector(".bl-modal")
-                .classList.add("active");
-            };
+              .classList.remove("container-xs");
+              document
+                .querySelector(".wrapper")
+                .classList.remove("container-sm");
+
           } else if (idBtn == 1) {
             document
               .querySelector(".wrapper")
@@ -102,7 +90,6 @@ var iframes = [
                 .classList.add("active");
             };
           }
-
       });
     });
   });
@@ -110,7 +97,7 @@ var iframes = [
 
 (function() {
   window.addEventListener("message", function(evt) {
-    console.log(evt);
+    // console.log(evt);
     if (evt.data.target == 6 && evt.data.source == 0) {
       iframes[5].onload = function() {
         iframes[5].contentWindow.document
