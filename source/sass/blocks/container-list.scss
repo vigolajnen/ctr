@@ -2,11 +2,12 @@
   // z-index: 31;
   position: relative;
   background: #ffffff;
+  min-height: 100%;
 }
 
 .container-list.empty {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 50px);
+  min-height: 100%;
 }

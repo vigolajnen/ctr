@@ -167,6 +167,7 @@ gulp.task("vendor", function () {
 gulp.task("main", function () {
   gulp
     .src([
+      "source/js/popup.js",
       "source/js/index.js"
     ])
     .pipe(concat("main.min.js"))
@@ -206,6 +207,18 @@ gulp.task("widget", function() {
   gulp
     .src(["source/js/iframes/widget.js"])
     .pipe(concat("widget.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js/iframes"));
+});
+
+gulp.task("content", function() {
+  gulp
+    .src(["source/js/iframes/content.js"])
+    .pipe(concat("content.min.js"))
     .pipe(
       uglify({
         mangle: false
@@ -341,10 +354,7 @@ gulp.task("serve", function () {
     ["js-add"],
     ["js-settings"],
     ["js-structure"],
-    ["js-phone"],
-    ["js-tablet"],
-    ["js-laptop"],
-    ["widget"]
+    ["content"]
   );
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
@@ -361,15 +371,12 @@ gulp.task("build", function (done) {
     "main",
     "tabs",
     "controls",
-    "widget",
+    "content",
     "edit",
     "js-code",
     "js-add",
     "js-settings",
     "js-structure",
-    "js-phone",
-    "js-tablet",
-    "js-laptop",
     "js-images",
     done
   );
