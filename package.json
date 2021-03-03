@@ -77,7 +77,7 @@
     "gulp.spritesmith": "^6.9.0",
     "imagemin-webp": "^5.0.0",
     "nouislider": "^12.1.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "swiper": "^4.5.0"
   },
   "config": {
