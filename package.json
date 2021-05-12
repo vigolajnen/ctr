@@ -78,7 +78,7 @@
     "imagemin-webp": "^5.0.0",
     "nouislider": "^12.1.0",
     "pug": "^2.0.3",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "config": {
     "directories": {
